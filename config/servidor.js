@@ -14,4 +14,7 @@ consign().include('./routes').into(app)
 //indicar a pasta dos assets (css, js, images, webfonts)
 app.use(express.static('./src/'))
 
+//habilitar o express para receber os dados de formularios
+app.use(express.urlencoded({extended:false}))
+
 module.exports = {app,porta}
